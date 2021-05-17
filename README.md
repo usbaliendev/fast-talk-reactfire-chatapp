@@ -23,8 +23,12 @@ HTML e Tailwind CSS | JavaScript | Google Firebase | Netlify
 
 4. Inicie o app no modo de desenvolvimento: `npm start` :arrow_down::arrow_down::arrow_down:
 
-![Compiled successfully!]()
+![Compiled successfully!](https://user-images.githubusercontent.com/50382278/118549882-6ffc8500-b732-11eb-9499-c5439f1c8ff7.png)
 
 5. Abra ou espere abrir o endereço [http://localhost:3000](http://localhost:3000) pra ver a aplicação no navegador
 
-![React starting point](https://alterclass.s3.eu-west-3.amazonaws.com/react-firechat.png)
+![Landing page](https://user-images.githubusercontent.com/50382278/118550112-b6ea7a80-b732-11eb-834e-36c64f91a384.png)
+
+![appwhite](https://user-images.githubusercontent.com/50382278/118550401-02048d80-b733-11eb-8eca-1c0b89c72dda.png)
+
+![appblack](https://user-images.githubusercontent.com/50382278/118550472-1a74a800-b733-11eb-8a7e-0135a81dbc67.png)
