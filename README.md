@@ -4,7 +4,7 @@ Codigo fonte do React Fast Talk APP construido com React, Firebase, e Tailwind
 CSS. Publicado no Netlify.
 
 Link da versão live de demonstração:
-[https://react-firechat-alterclass.netlify.app/](https://react-firechat-alterclass.netlify.app/).
+[https://link.netlify.appAQUI/]().
 
 ## Camadas de Tecnlogias usadas
 
