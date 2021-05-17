@@ -27,8 +27,8 @@ HTML e Tailwind CSS | JavaScript | Google Firebase | Netlify
 
 5. Abra ou espere abrir o endereço [http://localhost:3000](http://localhost:3000) pra ver a aplicação no navegador
 
-![Landing page](https://user-images.githubusercontent.com/50382278/118554208-88bb6980-b737-11eb-9c5f-1e24b942900e.png)
+![Landing page](https://user-images.githubusercontent.com/50382278/118554216-89ec9680-b737-11eb-9e61-361b4fcb05ca.png)
 
-![appwhite](https://user-images.githubusercontent.com/50382278/118554214-89ec9680-b737-11eb-9afb-55ba0f7bc163.png)
+![appwhite](https://user-images.githubusercontent.com/50382278/118554208-88bb6980-b737-11eb-9c5f-1e24b942900e.png)
 
-![appblack](https://user-images.githubusercontent.com/50382278/118554216-89ec9680-b737-11eb-9e61-361b4fcb05ca.png)
+![appblack](https://user-images.githubusercontent.com/50382278/118554214-89ec9680-b737-11eb-9afb-55ba0f7bc163.png)
