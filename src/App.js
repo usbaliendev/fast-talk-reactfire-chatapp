@@ -50,6 +50,7 @@ const SunIcon = props => (
   </svg>
 );
 
+const db = firebase.firestore();
 function App() {
   const { user, initializing } = useAuthState(firebase.auth());
   const [darkMode, setDarkMode] = useDarkMode();

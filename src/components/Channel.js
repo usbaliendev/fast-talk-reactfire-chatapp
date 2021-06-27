@@ -4,12 +4,13 @@ import firebase from 'firebase/app';
 import { useFirestoreQuery } from '../hooks';
 // Componentes
 import Message from './Message';
+import { reduce } from 'lodash';
 
 const Channel = ({ user = null }) => {
   const db = firebase.firestore();
   const messagesRef = db.collection('messages');
   const messages = useFirestoreQuery(
-    messagesRef.orderBy('createdAt', 'desc').limit(100)
+    messagesRef.orderBy('createdAt', 'asc').limit(100)
   );
 
   const [newMessage, setNewMessage] = useState('');
@@ -27,8 +28,13 @@ const Channel = ({ user = null }) => {
 
   const handleOnChange = e => {
     setNewMessage(e.target.value);
-  };
+  };  
+  // console.log(user.uid);
+  // messages.filter(function(message){
+  //   console.log(message.uid);
+  // });
 
+ 
   const handleOnSubmit = e => {
     e.preventDefault();
 
@@ -48,6 +54,21 @@ const Channel = ({ user = null }) => {
       bottomListRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  const message_box_recebe = {
+
+    borderRadius: "5px",
+    marginRight: "50%",
+    padding: "10px",
+    
+
+  };
+  const message_box_logado = {
+
+    borderRadius: "5px",
+    marginLeft: "50%",
+    padding: "10px"
+
+  }; 
 
   return (
     <div className="flex flex-col h-full">
@@ -64,20 +85,27 @@ const Channel = ({ user = null }) => {
             </p>
           </div>
           <ul>
-            {messages
-              ?.sort((first, second) =>
-                first?.createdAt?.seconds <= second?.createdAt?.seconds ? -1 : 1
-              )
-              ?.map(message => (
-                <li key={message.id}>
-                  <Message {...message} />
-                </li>
-              ))}
+            {messages.map(function(message){
+              if(message.uid == user.uid){
+                return <li key={message.id} style={message_box_logado}>
+                          <Message {...message} />
+                        </li>;
+              }
+              else {
+                return <li key={message.id} style={message_box_recebe}>
+                          <Message {...message} />
+                       </li>;
+              }
+            })}
           </ul>
           <div ref={bottomListRef} />
         </div>
       </div>
       <div className="mb-6 mx-4">
+        
+
+        
+
         <form
           onSubmit={handleOnSubmit}
           className="flex flex-row bg-gray-200 dark:bg-coolDark-400 rounded-md px-4 py-3 z-10 max-w-screen-lg mx-auto dark:text-white shadow-md"
