@@ -54,6 +54,7 @@ const Channel = ({ user = null }) => {
       bottomListRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  //css das box de tudo que nao for user logado
   const message_box_recebe = {
 
     borderRadius: "5px",
@@ -62,6 +63,8 @@ const Channel = ({ user = null }) => {
     
 
   };
+    //css da box do user logado
+
   const message_box_logado = {
 
     borderRadius: "5px",
@@ -85,6 +88,7 @@ const Channel = ({ user = null }) => {
             </p>
           </div>
           <ul>
+            {/* intera sobre cada mensagem e compara entre o usuario logado e da msg enviada */}
             {messages.map(function(message){
               if(message.uid == user.uid){
                 return <li key={message.id} style={message_box_logado}>

@@ -50,6 +50,7 @@ const SunIcon = props => (
   </svg>
 );
 
+//por algum motivo dps que tirei isso aqui deu ruim
 const db = firebase.firestore();
 function App() {
   const { user, initializing } = useAuthState(firebase.auth());
